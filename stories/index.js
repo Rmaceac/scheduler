@@ -13,6 +13,7 @@ import Status from "components/Appointment/Status";
 import Error from "components/Appointment/Error";
 import Form from "components/Appointment/Form";
 
+
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
@@ -169,10 +170,17 @@ storiesOf("Appointment", module)
       onClose={action("onClose")}
     />)
     )
-  .add("Edit", () => (
+  .add("Form Edit", () => (
     <Form 
       student="Ryan MacEachern"
       interviewer={3}
+      interviewers={interviewers}
+      onSave={action("onSave")}
+      onCancel={action("onCancel")}
+    />
+  ))
+  .add("Form Create", () => (
+    <Form
       interviewers={interviewers}
       onSave={action("onSave")}
       onCancel={action("onCancel")}
