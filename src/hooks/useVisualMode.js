@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function useVisualMode (initial) {
   const [history, setHistory] = useState([initial])
@@ -6,7 +6,6 @@ export default function useVisualMode (initial) {
   const transition = (newMode, replace = false) => {
     //newMode is added to the BEGINNING of the history array
     setHistory((prev) => ([newMode, ...prev]));
-    // console.log("HISTORY:", history);
     if (replace) {
       let historyCopy = [...history];
       historyCopy.splice(0, 1, newMode);

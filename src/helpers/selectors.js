@@ -29,3 +29,19 @@ export function getInterview(state, interview) {
 
   return result;
 }
+
+export function getInterviewersForDay(state, selectedInterviewer) {
+  const aptIDs = [];
+  
+  for (const day of state.days) {
+    if (day.name === selectedInterviewer) {
+      aptIDs.push(...day.interviewers)
+    }
+  }
+  
+  const results = aptIDs.map(id => {
+      return state.interviewers[id]
+    })
+          
+  return results;
+}
