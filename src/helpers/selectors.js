@@ -30,11 +30,11 @@ export function getInterview(state, interview) {
   return result;
 }
 
-export function getInterviewersForDay(state, selectedInterviewer) {
+export function getInterviewersForDay(state, selectedDay) {
   const aptIDs = [];
   
   for (const day of state.days) {
-    if (day.name === selectedInterviewer) {
+    if (day.name === selectedDay) {
       aptIDs.push(...day.interviewers)
     }
   }

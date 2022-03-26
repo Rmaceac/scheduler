@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DayList from "./DayList";
 import Appointment from "./Appointment";
-import { getAppointmentsForDay } from "helpers/selectors";
+import { getAppointmentsForDay, getInterviewersForDay } from "helpers/selectors";
 import { getInterview } from "helpers/selectors";
 import InterviewerList from "./InterviewerList";
 
@@ -59,6 +59,7 @@ export default function Application(props) {
 
 
   const dailyAppointments = getAppointmentsForDay(state, state.day);
+  const dailyInterviewers = getInterviewersForDay(state, state.day);
 
   // how do these work?
   const setDay = day => setState({ ...state, day });
@@ -107,6 +108,7 @@ export default function Application(props) {
               id={apt.id}
               time={apt.time}
               interview={interview}
+              interviewers={dailyInterviewers}
             />  
           )
         })}
