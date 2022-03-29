@@ -3,7 +3,7 @@ import Button from 'components/Button';
 import InterviewerList from 'components/InterviewerList';
 
 export default function Form(props) {
-  const { interviewers, onSave, onCancel } = props;
+  const { interviewers, onSave, onCancel, selected } = props;
   const [student, setStudent] = useState(props.student || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
 
@@ -30,7 +30,7 @@ export default function Form(props) {
             onChange={(event) => setStudent(event.target.value)}
           />
         </form>
-        <InterviewerList 
+        <InterviewerList
           interviewers={interviewers}
           value={interviewer}
           onChange={setInterviewer}
