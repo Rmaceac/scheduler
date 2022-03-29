@@ -58,7 +58,7 @@ export default function Application(props) {
   })
 
   function bookInterview(id, interview) {
-    console.log(id, interview);
+    // console.log(id, interview);
     
     const appointment = {
       ...state.appointments[id],
@@ -70,10 +70,14 @@ export default function Application(props) {
       [id]: appointment
     };
 
-    setState({
-      ...state,
-      appointments
-    });
+    return axios.put(`/api/appointments/${id}`, {interview})
+            .then((res) => {
+              setState({
+                ...state,
+                appointments
+              });
+            })
+      
   };
 
   const dailyAppointments = getAppointmentsForDay(state, state.day);
@@ -120,6 +124,7 @@ export default function Application(props) {
       <section className="schedule">
         {dailyAppointments.map((apt) => {
           const interview = getInterview(state, apt.interview)
+          // console.log("Interview:", interview);
           return (
             <Appointment
               key={apt.id}
