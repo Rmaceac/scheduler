@@ -25,8 +25,20 @@ With the scheduler_api (linked below), data is persistent between refreshes. The
 Find the Scheduler API [here.](https://github.com/lighthouse-labs/scheduler-api)
 
 ## Screenshots
+#### The Main Interface:
+![The main interface](https://github.com/Rmaceac/scheduler/blob/master/docs/main-page.png?raw=true)
 
+#### Creating an Appointment:
+![Creating an appointment](https://github.com/Rmaceac/scheduler/blob/master/docs/creating-appointment.png?raw=true)
 
+#### Displaying a 'No-Name-Provided' Error:
+![Displaying a 'No-Name-Provided' Error](https://github.com/Rmaceac/scheduler/blob/master/docs/no-name-error.png?raw=true)
+
+#### Animated 'Saving' Feedback:
+![Animated 'Saving' feedback](https://github.com/Rmaceac/scheduler/blob/master/docs/saving-appointment.png?raw=true)
+
+#### 'Confirm Delete' Prompt:
+!['Confirm Delete' Prompt](https://github.com/Rmaceac/scheduler/blob/master/docs/confirm-delete.png?raw=true)
 
 ## Setup
 
