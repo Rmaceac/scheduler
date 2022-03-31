@@ -4,7 +4,7 @@ export default function useVisualMode (initial) {
   const [history, setHistory] = useState([initial])
   
   const transition = (newMode, replace = false) => {
-    //newMode is added to the BEGINNING of the history array
+    // newMode is added to the BEGINNING of the history array (0th index)
     setHistory((prev) => ([newMode, ...prev]));
     if (replace) {
       let historyCopy = [...history];

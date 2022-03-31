@@ -6,8 +6,6 @@ import InterviewerListItem from './InterviewerListItem';
 export default function InterviewerList(props) {
   const { interviewers, onChange, value } = props;
   
-  // console.log("InterviewerList props:", props)
-  
   const interviewersArray = interviewers.map((interviewerItem) => {
     return (
     <InterviewerListItem
@@ -20,7 +18,6 @@ export default function InterviewerList(props) {
       )
     })
 
-    
     return (
       <section className="interviewers">
       <h4 className="interviewers__header text--light">Interviewer</h4>
@@ -29,8 +26,6 @@ export default function InterviewerList(props) {
       </ul>
     </section>
   );
-  
-  
 }
 
 InterviewerList.propTypes = {
